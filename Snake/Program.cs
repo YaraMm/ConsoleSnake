@@ -8,8 +8,12 @@ namespace Snake
 {
     internal class Program
     {
+        public static Field _fieldTools;
+
         static void Main(string[] args)
         {
+            var field = Field.InitField();
+            Field.ShowField(field);
         }
     }
 }
