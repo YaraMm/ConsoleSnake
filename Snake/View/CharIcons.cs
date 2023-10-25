@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Snake.View
 {
-    internal class CharIcons
+    public class CharIcons
     {
+        public const char SnakeIcon = '*';
+        public const char BorderIcon = 'x';
+        public const char FoodIcon = 'o';
     }
 }
