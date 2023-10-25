@@ -44,9 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control.cs" />
     <Compile Include="Controller\Action.cs" />
-    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\KeyReader.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="Model\Entities\Border.cs" />
     <Compile Include="Model\Entities\BorderType.cs" />
