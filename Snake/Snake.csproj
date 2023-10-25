@@ -54,7 +54,7 @@
     <Compile Include="Model\GameField.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usefull.cs" />
+    <Compile Include="View\CharIcons.cs" />
     <Compile Include="View\Frame.cs" />
     <Compile Include="View\TextViewer.cs" />
   </ItemGroup>
