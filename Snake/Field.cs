@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    internal class Field
+    public class Field
     {
         static Program _Program = new Program();
         public const int Width = 20;
