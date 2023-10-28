@@ -26,7 +26,7 @@ namespace Snake.Tests
             frame.Pixels[y, x] = CharIcons.FoodIcon;
             view.Draw(targetFrame, food);
 
-            targetFrame.Pixels.Should().BeEquivalentTo(frame);
+            targetFrame.Pixels.Should().BeEquivalentTo(frame.Pixels);
         }
 
         [DataTestMethod]
@@ -50,13 +50,13 @@ namespace Snake.Tests
         [DataRow(3, 1, BorderType.Horizontal, 0, 0, 3)]
         [DataRow(1, 1, BorderType.Horizontal, 0, 0, 1)]
         [DataRow(1, 1, BorderType.Vertical, 0, 0, 1)]
-        [DataRow(5, 5, BorderType.Vertical, 0, 4, 5)]
+        [DataRow(5, 5, BorderType.Vertical, 4, 0, 5)]
         [DataRow(3, 3, BorderType.Horizontal, 2, 2, 1)]
         [DataRow(3, 3, BorderType.Vertical, 2, 2, 1)]
         [DataRow(5, 10, BorderType.Horizontal, 0, 0, 5)]
         [DataRow(5, 10, BorderType.Horizontal, 0, 4, 5)]
         [DataRow(5, 10, BorderType.Vertical, 0, 0, 10)]
-        [DataRow(5, 10, BorderType.Vertical, 9, 0, 10)]
+        [DataRow(5, 10, BorderType.Vertical, 4, 0, 10)]
         public void OneBorderCorrectPositionViewTest(int width, int height, BorderType type, int x, int y, int length)
         {
             var view = new TextViewer();
@@ -76,7 +76,7 @@ namespace Snake.Tests
 
             view.Draw(targetFrame, border);
 
-            targetFrame.Pixels.Should().BeEquivalentTo(frame);
+            targetFrame.Pixels.Should().BeEquivalentTo(frame.Pixels);
         }
 
 
