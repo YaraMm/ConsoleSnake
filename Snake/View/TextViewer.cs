@@ -40,7 +40,13 @@ namespace Snake.View
 
         public void Draw(Frame frame, SnakeEntity snake)
         {
-
+            var s = snake.SnakeSegments;
+            for(int i = 0; i < snake.CurrentLength; i++)
+            {
+                var x = s[i].X; 
+                var y = s[i].Y;
+                frame.Pixels[y, x] = CharIcons.SnakeIcon;
+            }
         }
     }
 }
