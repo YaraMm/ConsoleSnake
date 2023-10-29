@@ -6,13 +6,17 @@ namespace Snake.Model.Entities
 {
     public class SnakeEntity
     {
-        public int CurrentLength { get; set; }
+        public int CurrentLength { 
+            get
+            {
+                return SnakeSegments.Count;
+            }
+        }
         public List<Point> SnakeSegments {  get; set; }  
 
 
         public SnakeEntity()
         {
-            CurrentLength = 3;
             SnakeSegments = new List<Point>(CurrentLength) { new Point { X =  1, Y = 2 },
                 new Point { X = 2, Y = 2 },
                 new Point { X = 3, Y = 2 } };
