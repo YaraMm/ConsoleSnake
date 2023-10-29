@@ -1,14 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace Snake.Model.Entities
 {
     public class SnakeEntity
     {
-        public int CurrentLength { get; set; }
-
+        public int CurrentLength { 
+            get
+            {
+                return SnakeSegments.Count;
+            }
+        }
+        public List<Point> SnakeSegments {  get; set; }  
         public SnakeEntity()
         {
-            CurrentLength = 3;
         }
 
         public bool CheckCollision(Border border)
