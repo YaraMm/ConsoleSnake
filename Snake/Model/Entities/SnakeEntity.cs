@@ -17,7 +17,6 @@ namespace Snake.Model.Entities
 
         public SnakeEntity()
         {
-            CurrentLength = 3;
             SnakeSegments = new List<Point>(CurrentLength) { new Point { X =  1, Y = 2 },
                 new Point { X = 2, Y = 2 },
                 new Point { X = 3, Y = 2 } };
