@@ -17,9 +17,12 @@ namespace Snake.Model.Entities
 
         public SnakeEntity()
         {
-            SnakeSegments = new List<Point>(CurrentLength) { new Point { X =  1, Y = 2 },
+            SnakeSegments = new List<Point>()
+            {
+                new Point { X =  1, Y = 2 },
                 new Point { X = 2, Y = 2 },
-                new Point { X = 3, Y = 2 } };
+                new Point { X = 3, Y = 2 } 
+            };
         }
 
         public bool CheckCollision(Border border)
